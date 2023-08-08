@@ -1,0 +1,267 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">Part of Woodrow Heights</span>
+
+      <h1 class="govuk-heading-l">
+        Avon Court
+      </h1>
+
+      {{ govukTable({
+        firstCellIsHeader: true,
+        rows: [
+          [
+            {
+              text: "Address"
+            },
+            {
+              text: "3 Example Street, Exampleton, AA3 1AB"
+            }
+          ],
+          [
+            {
+              text: "Number of floors at and above ground level"
+            },
+            {
+              text: "15"
+            }
+          ],
+          [
+            {
+              text: "Height"
+            },
+            {
+              text: "45 metres"
+            }
+          ],
+          [
+            {
+              text: "Number of residential units"
+            },
+            {
+              text: "42"
+            }
+          ],
+          [
+            {
+              text: "Are people living in it?"
+            },
+            {
+              text: "Yes"
+            }
+          ],
+          [
+            {
+              text: "Built"
+            },
+            {
+              text: "Between 1970 and 1984"
+            }
+          ],
+          [
+            {
+              text: "Completion certifcate issuer"
+            },
+            {
+              text: "Harringey Council"
+            }
+          ],
+          [
+            {
+              text: "Completion certificate number"
+            },
+            {
+              text: "187625438"
+            }
+          ]
+        ]
+      }) }}
+
+      <div class="govuk-!-padding-bottom-4"></div>
+
+      <h2 class="govuk-heading-m">Who is responsible for the buildings safety</h2>
+
+      <p>These organisations or individuals are also known as accountable persons.</p>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Address</th>
+            <th scope="col" class="govuk-table__header">Responsible for</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Greenways Limited</th>
+            <td class="govuk-table__cell">17 Rosewood Avenue<br>Oakshire<br>Manchester<br>M8 4JT</td>
+            <td class="govuk-table__cell">External walls and roof<br>Routes that residents can walk through</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Rune Ltd</th>
+            <td class="govuk-table__cell">56 Thistle Street<br> Heatherfield<br>EH3 6QW</td>
+            <td class="govuk-table__cell">Maintaining plant and equipment<br>Facilities that residents share</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="govuk-!-padding-bottom-4"></div>
+
+    </div>
+
+    <div class="govuk-grid-column-full">
+
+      {% from "govuk/components/table/macro.njk" import govukTable %}
+
+      <div class="govuk-!-padding-bottom-4"></div>
+
+      
+
+      <h2 class="govuk-heading-m">Past month</h2>
+
+      {{ govukTable({
+        head: [
+          {
+            text: "Case manager"
+          },
+          {
+            text: "Cases opened"
+          },
+          {
+            text: "Cases closed"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "David Francis"
+            },
+            {
+              text: "98"
+            },
+            {
+              text: "95"
+            }
+          ],
+          [
+            {
+              text: "Paul Farmer"
+            },
+            {
+              text: "122"
+            },
+            {
+              text: "131"
+            }
+          ],
+          [
+            {
+              text: "Rita Patel"
+            },
+            {
+              text: "126"
+            },
+            {
+              text: "142"
+            }
+          ]
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Past year</h2>
+      {{ govukTable({
+        head: [
+          {
+            text: "Case manager"
+          },
+          {
+            text: "Cases opened"
+          },
+          {
+            text: "Cases closed"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "David Francis"
+            },
+            {
+              text: "1380"
+            },
+            {
+              text: "1472"
+            }
+          ],
+          [
+            {
+              text: "Paul Farmer"
+            },
+            {
+              text: "1129"
+            },
+            {
+              text: "1083"
+            }
+          ],
+          [
+            {
+              text: "Rita Patel"
+            },
+            {
+              text: "1539"
+            },
+            {
+              text: "1265"
+            }
+          ]
+        ]
+      }) }}
+
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-!-padding-bottom-4"></div>
+
+      <h2 class="govuk-heading-m">If you think some of the information here is wrong</h2>
+
+      <h3 class="govuk-heading-s">If you are part of Greenways Limited</h3>
+
+      <p>You must tell the Building Safety Regulator about any information here which needs to be changed.</p>
+
+      <h3 class="govuk-heading-s">If you are a resident</h3>
+
+      <p>You should contact Greenways Limited to ask them to change this. They should have shared their engagment strategy with all residents of this building. This should describe how to raise complaints and questions with them.</p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            I have tried and failed to contact Greenways Limited
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          If you have contacted Greenways Limited, but not had a response, then you can <a href="#">contact the Building Safety Reglator</a> to ask us to speak to them for you.
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+
+{% endblock %}
