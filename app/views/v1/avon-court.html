@@ -22,83 +22,46 @@
         Avon Court
       </h1>
 
-      {{ govukTable({
-        firstCellIsHeader: true,
-        rows: [
-          [
-            {
-              text: "Address"
-            },
-            {
-              text: "3 Example Street, Exampleton, AA3 1AB"
-            }
-          ],
-          [
-            {
-              text: "Other known postcodes"
-            },
-            {
-              text: "AA3 1AC"
-            }
-          ],
-          [
-            {
-              text: "Number of floors at and above ground level"
-            },
-            {
-              text: "15"
-            }
-          ],
-          [
-            {
-              text: "Height"
-            },
-            {
-              text: "45 metres"
-            }
-          ],
-          [
-            {
-              text: "Number of residential units"
-            },
-            {
-              text: "42"
-            }
-          ],
-          [
-            {
-              text: "Are people living in it?"
-            },
-            {
-              text: "Yes"
-            }
-          ],
-          [
-            {
-              text: "Built"
-            },
-            {
-              text: "Between 1970 and 1984"
-            }
-          ],
-          [
-            {
-              text: "Completion certifcate issuer"
-            },
-            {
-              text: "Harringey Council"
-            }
-          ],
-          [
-            {
-              text: "Completion certificate number"
-            },
-            {
-              text: "187625438"
-            }
-          ]
-        ]
-      }) }}
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Address</th>
+            <td class="govuk-table__cell">3 Example Street<br>Exampleton<br>AA3 1AB</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Other postcodes</th>
+            <td class="govuk-table__cell">AA3 1AC</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Number of floors</th>
+            <td class="govuk-table__cell">15</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Height</th>
+            <td class="govuk-table__cell">45 metres</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Number of residential units</th>
+            <td class="govuk-table__cell">38</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Are people living in it?</th>
+            <td class="govuk-table__cell">Yes</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Built</th>
+            <td class="govuk-table__cell">Between 1970 and 1984</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Completion certifcate issuer</th>
+            <td class="govuk-table__cell">Harringey Council</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Completion certifcate number</th>
+            <td class="govuk-table__cell">018473522</td>
+          </tr>
+        </tbody>
+      </table>
 
       <div class="govuk-!-padding-bottom-4"></div>
 
@@ -141,6 +104,34 @@
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">Controls in the residential units</th>
             <td class="govuk-table__cell">Smoke detectors<br>Sprinklers or misters</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Controls in the parts residents share</th>
+            <td class="govuk-table__cell">Alarm connected to heat or smoke detectors<br>Fire extinguishers<br>Smoke detectors</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Alarms locations</th>
+            <td class="govuk-table__cell">Common corridor<br>Common staircase<br>Lobby</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Fire extinguishers locations</th>
+            <td class="govuk-table__cell">Common corridor<br>Common staircase</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Smoke detector locations</th>
+            <td class="govuk-table__cell">Common corridor<br>Common staircase<br>Lobby</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Types of lift</th>
+            <td class="govuk-table__cell">Fire fighting lift<br>Firemen's lift</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Residential front doors</th>
+            <td class="govuk-table__cell">30 doors with no certified fire resistance</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Fire doors in the parts residents share</th>
+            <td class="govuk-table__cell">8 doors with 30 minute certified fire resistance<br>4 doors with 60 minute fire resistance<br>12 in total</td>
           </tr>
         </tbody>
       </table>
