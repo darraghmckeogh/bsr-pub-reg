@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Section",
+        href: "#"
+      },
+      {
+        text: "Subsection"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        {{ serviceName }}
+      </h1>
+
+      <p>Use this service to see what information the Building Safety Regulator holds about an occupied high-rise residential building and who is responsible for it's safety.</p>
+
+      <p>A high-rise residential building has:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>at least 7 floors or is at least 18 metres in height</li>
+        <li>at least 2 residential units</li>
+      </ul>
+
+      <p>You can find...</p>
+
+      {{ govukButton({
+        text: "Start now",
+        href: "find",
+        isStartButton: true
+      }) }}
+
+      <h2 class="govuk-heading-m">Before you start</h2>
+
+      <p>You will need to know the name, address or postcode of the building.</p>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+  </div>
+
+{% endblock %}

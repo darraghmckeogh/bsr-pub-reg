@@ -1,0 +1,221 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Avon Court
+      </h1>
+
+      <span class="govuk-caption-l">3 Example Street, Exampleton, AA3 1AB</span>
+
+      <div class="govuk-!-padding-bottom-8"></div>
+
+      <p>Contents</p>
+
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="#aps">Who is responsible for the buildings safety</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#summary">Summary information</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#fire">Fire and smoke control equipment</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#materials">Materials the building is made from</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#uses">Uses of the building</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#connections">Connections to other buildings</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#structural">Structural information</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#energy">Energy information</a>
+        </li>
+      </ul>
+
+      <div class="govuk-!-padding-bottom-8"></div>
+
+      <h2 class="govuk-heading-m" id="aps">Who is responsible for the buildings safety</h2>
+
+      <p>These are also known as accountable persons.</p>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Address</th>
+            <th scope="col" class="govuk-table__header">Responsible for</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Greenways Limited</th>
+            <td class="govuk-table__cell">17 Rosewood Avenue<br>Oakshire<br>Manchester<br>M8 4JT</td>
+            <td class="govuk-table__cell">External walls and roof<br>Routes that residents can walk through</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Rune Ltd</th>
+            <td class="govuk-table__cell">56 Thistle Street<br> Heatherfield<br>EH3 6QW</td>
+            <td class="govuk-table__cell">Maintaining plant and equipment<br>Facilities that residents share</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="govuk-!-padding-bottom-4"></div>
+
+      <h2 class="govuk-heading-m">Summary information</h2>
+
+      <h3 class="govuk-heading-s">Evacuation strategy</h3>
+
+      <p>In the event of a fire, the evacuation policy for Avon Court is temporary simultaneous. This means...</p>
+
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Number of floors above ground</th>
+            <td class="govuk-table__cell">15</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Number of floors below ground</th>
+            <td class="govuk-table__cell">1</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Height</th>
+            <td class="govuk-table__cell">45 metres</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Number of residential units</th>
+            <td class="govuk-table__cell">120</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Built</th>
+            <td class="govuk-table__cell">Between 1970 and 1984</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="govuk-heading-s">Other postcodes or addresses</h3>
+
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">4 Example Street, Exampleton, AA3 1AB</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">AA3 1AC</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="govuk-!-padding-bottom-4"></div>
+
+      <h2 class="govuk-heading-m">Fire and smoke control</h2>
+
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Equipment in the residential units</th>
+            <td class="govuk-table__cell">Smoke detectors<br>Sprinklers or misters</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Equipment in the parts residents share</th>
+            <td class="govuk-table__cell">Alarm connected to heat or smoke detectors<br>Fire extinguishers<br>Smoke detectors</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Location of the alarms</th>
+            <td class="govuk-table__cell">Common corridor<br>Common staircase<br>Lobby</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Location of the fire extinguishers</th>
+            <td class="govuk-table__cell">Common corridor<br>Common staircase</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Location of the smoke detectors</th>
+            <td class="govuk-table__cell">Common corridor<br>Common staircase<br>Lobby</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="govuk-heading-s">Fire doors</h3>
+
+      <p>30 of the residential front doors are not certified fire resistant. 10 are certified fire resistant for 30 minutes.</p>
+
+      <p>In the parts of the building residents share, there are:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>8 fire doors with 30 minute certified fire resistance</li>
+        <li>4 fire doors with 60 minute certified fire resistance</li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Evacuation or firefighter lifts</h3>
+
+      <p>The building contains at least one:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>fire fighting lift</li>
+        <li>firemen's lift</li>
+      </ul>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            What are the different types of evacuation or firefighters lift?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>Evacuation lifts have structural, electrical and fire protection. They're used to evacuate people with a disability or extra needs.</p>
+          <p>Firefighters lifts have protection, controls and signals for firefighters to control it. The 2003 British Standard classifies these lifts.</p>
+          <p>Fire-fighting lifts are like firefighters lifts but less stringent. The 1986 British Standard classifies these lifts.</p>
+          <p>Modernised lifts for fire service use are normally used for passengers. But they have basic extra protection, controls and signals for firefighters to use.</p>
+          <p>Firemen's lifts were installed before fire-fighting lift standards were available. They have no complex lift controls or protection measures for firefighters to use.</p>
+        </div>
+      </details>
+
+      <div class="govuk-!-padding-bottom-4"></div>
+
+      <h2 class="govuk-heading-m">If you think some of the information here is wrong</h2>
+
+      <h3 class="govuk-heading-s">If you are part of Greenways Limited</h3>
+
+      <p>You must tell the Building Safety Regulator about any information here which needs to be changed.</p>
+
+      <h3 class="govuk-heading-s">If you are a resident</h3>
+
+      <p>You should contact Greenways Limited to ask them to change this. They should have shared their engagment strategy with all residents of this building. This should describe how to raise complaints and questions with them.</p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            I have tried and failed to contact Greenways Limited
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          If you have contacted Greenways Limited, but not had a response, then you can <a href="#">contact the Building Safety Reglator</a> to ask us to speak to them for you.
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+
+{% endblock %}
