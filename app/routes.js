@@ -20,7 +20,7 @@ router.post('/find-answer', function(request, response) {
 
 // V2
 
-router.post('/find-answer', function(request, response) {
+router.post('/find-answer-v2', function(request, response) {
 
     var find = request.session.data['find']
     if (find == "AA3 1AB"){
