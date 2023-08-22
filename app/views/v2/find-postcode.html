@@ -17,29 +17,44 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Find a high-rise residential building
+        Find a registered high-rise residential building
       </h1>
 
-      <form class="form" action="/find-answer-v2" method="post">
+      <form class="form" action="/find-postcode-answer" method="post">
 
         {% from "govuk/components/input/macro.njk" import govukInput %}
 
         {{ govukInput({
           label: {
-            text: "Building name or postcode",
+            text: "Postcode",
             classes: "govuk-label--s",
             isPageHeading: false
           },
-          hint: {
-            text: "For example, 'Prospect House' or 'AA3 1AB'"
+          classes: "govuk-input--width-10",
+          id: "postcode",
+          name: "postcode"
+        }) }}
+
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+        {{ govukCheckboxes({
+          name: "waste",
+          fieldset: {
+            legend: {
+            }
           },
-          id: "find",
-          name: "find"
+          items: [
+            {
+              text: "I am not a robot"
+            }
+          ]
         }) }}
 
         {{ govukButton({
           text: "Find building"
         }) }}
+
+        <p><a href="find-building-name-and-city">Search by building name and city</a></p>
 
       </form>
 

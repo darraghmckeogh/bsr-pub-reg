@@ -23,9 +23,39 @@ router.post('/find-answer', function(request, response) {
 router.post('/find-answer-v2', function(request, response) {
 
     var find = request.session.data['find']
-    if (find == "AA3 1AB"){
+    if (find == "Avon Court"){
         response.redirect("/v2/select-aa3-1ab")
     } else {
-        response.redirect("/v2/not-found")
+        response.redirect("/v2/not-found-name-postcode")
+    }
+})
+
+router.post('/find-street-and-town-answer', function(request, response) {
+
+    var find = request.session.data['find']
+    if (find == "Avon Court"){
+        response.redirect("/v2/select-aa3-1ab")
+    } else {
+        response.redirect("/v2/not-found-street-and-town")
+    }
+})
+
+router.post('/find-building-name-and-city-answer', function(request, response) {
+
+    var find = request.session.data['building-name']
+    if (find == "Avon Court"){
+        response.redirect("/v2/select-avon-court")
+    } else {
+        response.redirect("/v2/not-found-building-name-and-city")
+    }
+})
+
+router.post('/find-postcode-answer', function(request, response) {
+
+    var find = request.session.data['postcode']
+    if (find == "W1A 1AB"){
+        response.redirect("/v2/avon-court")
+    } else {
+        response.redirect("/v2/not-found-postcode")
     }
 })
