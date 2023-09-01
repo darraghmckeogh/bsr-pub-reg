@@ -1,0 +1,67 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Select a building – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Select a high-rise residential building
+      </h1>
+
+      <p>3 buildings found for <strong>{{ data['building-name'] }}</strong> and <strong>{{ data['city'] }}</strong>.</p>
+
+      <form class="form" action="avon-court" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {{ govukRadios({
+          name: "select-the-address",
+          fieldset: {
+            legend: {
+            }
+          },
+          items: [
+            {
+              text: "Avon Court (part of Aston Heights)",
+              hint: {
+                text: "18 Baker Street, London, W1A 1AB"
+              }
+            },
+            {
+              text: "Avon Court",
+              hint: {
+                text: "6 Marsh Avenue, London, E1X 2YZ"
+              }
+            },
+            {
+              text: "Stafford Tower (part of Avon Court)",
+              hint: {
+                text: "234 Ivy Lane, London, NW56 8CD"
+              }
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+        <p><a href="find">Search again</a></p>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
