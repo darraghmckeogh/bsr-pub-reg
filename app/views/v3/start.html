@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-{{ serviceName }} - GOV.UK Prototype
+Information the Building Safety Regulator holds about high-rise residential buildings - GOV.UK Prototype
 {% endblock %}
 
 {% block header %}
@@ -41,7 +41,7 @@
       <span class="govuk-caption-xl">Guidance</span>
 
       <h1 class="govuk-heading-l">
-        {{ serviceName }}
+        Information the Building Safety Regulator holds about high-rise residential buildings
       </h1>
 
       <p class="govuk-body-l">Find out what information the Building Safety Regulator holds in its register of high-rise residential buildings in England, and how you can access that information.</p>
@@ -117,14 +117,14 @@
 
       <h2 class="govuk-heading-m" id="3">Find information for a high-rise residential building</h2>
 
-      <p>You can find the information we hold about a high-rise building. To do this, you can:</p>
+      <p>You can find the information we hold about a high-rise residential building if you know its postcode.</p>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="find-postcode">search by postcode</a></li>
-        <li><a href="find-building-name-and-city">search by building name and city</a></li>
-      </ul>
+      {% from "govuk/components/button/macro.njk" import govukButton %}
 
-      <p>You'll need to know the building's name and city, or the postcode.</p>
+      {{ govukButton({
+        text: "Search by postcode",
+        href: "find-postcode"
+      }) }}
 
       <h2 class="govuk-heading-m" id="4">If you think the information is wrong</h2>
 
