@@ -1,0 +1,134 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Information the Building Safety Regulator holds about high-rise residential buildings - GOV.UK Prototype
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Housing, local and community",
+        href: "#"
+      },
+      {
+        text: "Planning and building",
+        href: "#"
+      },
+      {
+        text: "Building regulation"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <span class="govuk-caption-xl">Guidance</span>
+
+      <h1 class="govuk-heading-l">
+        Information the Building Safety Regulator holds about high-rise residential buildings
+      </h1>
+
+      <p class="govuk-body-l">Find out what information the Building Safety Regulator holds in its register of high-rise residential buildings in England, and how you can access that information.</p>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <p>From: <a href="#"><b>Health and Safety Executive</b></a>
+      <br>Published 20 September 2023</p>
+
+      <div style="background-color:rgb(243, 242, 241);padding:20px">
+        <h2 class="govuk-heading-s govuk-!-margin-bottom-0">Applies to England</h2>
+      </div>
+
+      <div class="govuk-!-padding-bottom-8"></div>
+
+      <p>Contents</p>
+
+      <ul class="govuk-list">
+        <li>
+          – <a class="govuk-link" href="#1">Buildings in this register</a>
+        </li>
+        <li>
+          – <a class="govuk-link" href="#2">Information the Building Safety Regulator holds</a>
+        </li>
+        <li>
+          – <a class="govuk-link" href="#3">Find information for a high-rise residential building</a>
+        </li>
+        <li>
+          – <a class="govuk-link" href="#4">If you think the information is wrong</a>
+        </li>
+        <li>
+          – <a class="govuk-link" href="#5">If you need help</a>
+        </li>
+      </ul>
+
+      <div class="govuk-!-padding-bottom-8"></div>
+
+      <h2 class="govuk-heading-m" id="1">Buildings in this register</h2>
+
+      <p>The Building Safety Regulator holds information about high-rise residential buildings in England. The buildings must have been registered with us and must have:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>at least 7 floors (or be at least 18 metres in height)</li>
+        <li>at least 2 residential units</li>
+        <li>people living in them or about to move in</li>
+      </ul>
+
+      <h2 class="govuk-heading-m" id="2">Information the Building Safety Regulator holds</h2>
+
+      <p>We hold information about who is responsible for the safety of the building's structure, external walls and roof. We call this organisation or person the ‘principal accountable person’.</p>
+
+      <p>They are also responsible for registering the building with the Building Safety Regulator. And they must tell us if any of the information we hold about the building changes.</p>
+
+      <p>We also hold information about other organisations or people who share responsibility for the safety of the parts of the building shared by residents. We call these organisations and people the ‘accountable persons’.</p>
+
+      <p>If the principal accountable person does not share responsibility for the building’s safety with anyone else, the building might not have any other accountable persons.</p>
+
+      <p>For each structure within a building, we also hold information about the building’s height, the number of floors and when it was built.</p>
+
+      <h2 class="govuk-heading-m" id="3">Find information for a high-rise residential building</h2>
+
+      <p>You can find the information we hold about a high-rise residential building if you know its postcode.</p>
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Search by postcode",
+        href: "find-postcode"
+      }) }}
+
+      <h2 class="govuk-heading-m" id="4">If you think the information is wrong</h2>
+
+      <p>You must try to contact the principal accountable person. They are responsible for the safety of the building's structure, external walls and roof. They are also responsible for registering the building and telling us if any of the information changes.</p>
+
+      <h2 class="govuk-heading-m" id="5">If you need help</h2>
+
+      <p>If you need help or need information about more than one building at a time, <a href="#">contact the Building Safety Regulator</a>.</p>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+  </div>
+
+{% endblock %}

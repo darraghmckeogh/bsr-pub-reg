@@ -62,8 +62,6 @@ router.post('/find-postcode-answer', function(request, response) {
     }
 })
 
-*/
-
 // V3
 
 router.post('/find-street-and-town-answer', function(request, response) {
@@ -93,5 +91,19 @@ router.post('/find-postcode-answer', function(request, response) {
         response.redirect("/v3/avon-court")
     } else {
         response.redirect("/v3/not-found-postcode")
+    }
+})
+
+*/
+
+// V4
+
+router.post('/find-postcode-answer', function(request, response) {
+
+    var find = request.session.data['postcode']
+    if (find == "W1A 1AB"){
+        response.redirect("/v4/avon-court")
+    } else {
+        response.redirect("/v4/not-found-postcode")
     }
 })
