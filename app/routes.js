@@ -102,7 +102,9 @@ router.post('/find-postcode-answer', function(request, response) {
 
     var find = request.session.data['postcode']
     if (find == "W1A 1AB"){
-        response.redirect("/v4/avon-court")
+        response.redirect("/v4/select-building")
+//    } else if (find == "W1A"){
+//        response.redirect("/v4/select-building")
     } else {
         response.redirect("/v4/not-found-postcode")
     }
