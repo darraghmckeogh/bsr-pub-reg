@@ -17,10 +17,10 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        We cannot find that postcode in our building register
+        {{ data['postcode'] }} is not in England
       </h1>
 
-      <p>This postcode (<strong>{{ data['postcode'] }}</strong>) is not in England. Only high-rise residential buildings in England are in the register.</p>
+      <p>Only high-rise residential buildings in England are in the register.</p>
 
       <p><a href="find-postcode">Search for another building</a></p>
 
