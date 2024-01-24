@@ -1,0 +1,59 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Building not found – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        We cannot find that postcode in our building register
+      </h1>
+
+      <p>No matches found for <strong>{{ data['postcode'] }}</strong>.</p>
+
+      <p>This could be because:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the postcode is not associated with a building that has been registered</li>
+        <li>the building is not a high-rise residential building</li>
+        <li>the building is not in England</li>
+        <li>you have not entered the postcode correctly</li>
+      </ul>
+
+      <p>Check the details you have entered are correct and <a href="find-postcode">search again</a>.
+
+      <p>If you believe you live in a high-rise residential building and cannot find it on this register, <a href="#">contact the Building Safety Regulator</a>.</p>
+
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Help with high-rise residential building
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>A high-rise residential building has at least:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>7 storeys or is at least 18 metres high</li>
+            <li>2 residential units</li>
+          </ul>
+    
+          <p>The building must be registered as a high-rise residential building before people can live there. These buildings are known as higher-risk buildings under the Building Safety Act 2022.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+
+{% endblock %}
