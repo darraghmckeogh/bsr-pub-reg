@@ -109,3 +109,19 @@ router.post('/find-postcode-answer', function(request, response) {
         response.redirect("/v4/not-found-postcode")
     }
 })
+
+
+
+// V5
+
+router.post('/find-postcode-answer', function(request, response) {
+
+    var find = request.session.data['postcode']
+    if (find == "W1A 1AB"){
+        response.redirect("/v5/select-building")
+//    } else if (find == "W1A"){
+//        response.redirect("/v4/select-building")
+    } else {
+        response.redirect("/v5/not-found-postcode")
+    }
+})
