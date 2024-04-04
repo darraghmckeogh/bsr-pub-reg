@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Building not found – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        We cannot find that postcode in our building register
+      </h1>
+
+      <p>No matches found for <strong>{{ data['postcode'] }}</strong>.</p>
+
+      <p>This could be because:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the postcode is not associated with a building that has been registered</li>
+        <li>the building is not a high-rise residential building</li>
+        <li>the building is not in England</li>
+        <li>you have not entered the postcode correctly</li>
+      </ul>
+
+      <p>Check the details you have entered are correct and <a href="find-postcode">search again</a>.
+
+      <p>If you believe you live in a high-rise residential building and cannot find it on this register, <a href="#">contact the Building Safety Regulator</a>.</p>
+
+    </div>
+  </div>
+
+{% endblock %}
